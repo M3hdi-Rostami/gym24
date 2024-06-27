@@ -1,3 +1,24 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: "made-outer-sans-medium";
+  src: url("../fonts/made-outer-sans/MADE\ Outer\ Sans\ Medium\ PERSONAL\ USE.otf")
+    format("truetype");
+}
+@font-face {
+  font-family: "made-outer-sans-bold";
+  src: url("../fonts/made-outer-sans/MADE\ Outer\ Sans\ Bold\ PERSONAL\ USE.otf")
+    format("truetype");
+}
+
+html,
+body {
+  @apply bg-black overflow-x-hidden;
+  font-family: "made-outer-sans-medium";
+}
+
+.font-family-extra-bold {
+  font-family: "made-outer-sans-bold";
+}
