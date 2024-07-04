@@ -8,7 +8,7 @@ import {
 const ReasonsJoin = () => {
   const ReasonBox = ({ image, title, description }) => {
     return (
-      <div className="flex items-center justify-center gap-5">
+      <div className="flex items-center justify-start gap-5">
         <img src={image} alt="reason box" className="w-20 h-20 pt-4" />
         <div className="flex flex-col gap-2">
           <span className="ont-family-extra-bold text-18">{title}</span>
@@ -48,8 +48,8 @@ const ReasonsJoin = () => {
   ];
 
   return (
-    <div className="px-56 py-8 mt-44 mb-60">
-      <div className="text-5xl font-family-extra-bold mb-28">
+    <div className="px-[220px] py-8 mt-44 mb-60">
+      <div className="text-5xl font-family-bold mb-28">
         Reasons to join
       </div>
       <div className="flex flex-wrap gap-x-28 gap-y-20 ">

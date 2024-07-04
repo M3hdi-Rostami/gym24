@@ -1,7 +1,8 @@
+import "./header.scss";
+
+import Button from "../button/Button";
 import { Link } from "react-router-dom";
 import { logo } from "../../assets/images";
-import "./header.scss";
-import Button from "../button/Button";
 
 const Header = () => {
   const navLinks = [
@@ -40,7 +41,7 @@ const Header = () => {
       </nav>
 
       <div className="max-w-2xl mt-56">
-        <span className="text-[64px] text-white font-medium font-family-extra-bold leading-tight">
+        <span className="text-[64px] text-white font-medium font-family-bold leading-tight">
           Free trial session with a trainer
         </span>
         <Button title={"Detailed"} extraClass={"w-[177px] mt-14"} />

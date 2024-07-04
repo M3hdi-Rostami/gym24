@@ -12,6 +12,11 @@
   src: url("../fonts/made-outer-sans/MADE\ Outer\ Sans\ Bold\ PERSONAL\ USE.otf")
     format("truetype");
 }
+@font-face {
+  font-family: "made-outer-sans-light";
+  src: url("../fonts/made-outer-sans/MADE\ Outer\ Sans\ Light\ PERSONAL\ USE.otf")
+    format("truetype");
+}
 
 html,
 body {
@@ -19,6 +24,11 @@ body {
   font-family: "made-outer-sans-medium";
 }
 
-.font-family-extra-bold {
-  font-family: "made-outer-sans-bold";
+.font-family- {
+  &bold {
+    font-family: "made-outer-sans-bold";
+  }
+  &light {
+    font-family: "made-outer-sans-light";
+  }
 }
