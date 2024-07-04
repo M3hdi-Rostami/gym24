@@ -1,7 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./assets/scss/index.scss";
-import "@mdi/font/css/materialdesignicons.min.css";
 
 import App from "./App";
 
