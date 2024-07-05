@@ -32,3 +32,37 @@ body {
     font-family: "made-outer-sans-light";
   }
 }
+
+/* Firefox (uncomment to work in Firefox, although other properties will not work!)  */
+/** {
+  scrollbar-width: thin;
+  scrollbar-color: #FAFF00 #222222;
+}*/
+
+/* Chrome, Edge and Safari */
+*::-webkit-scrollbar {
+  @apply w-1.5 h-1.5;
+}
+*::-webkit-scrollbar-track {
+  @apply bg-dark-gray rounded;
+}
+
+*::-webkit-scrollbar-track:hover {
+  @apply bg-dark-gray;
+}
+
+*::-webkit-scrollbar-track:active {
+  @apply bg-dark-gray;
+}
+
+*::-webkit-scrollbar-thumb {
+  @apply rounded bg-yellow;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  @apply bg-yellow;
+}
+
+*::-webkit-scrollbar-thumb:active {
+  @apply bg-yellow;
+}
