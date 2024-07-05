@@ -2,7 +2,8 @@ import { slide1, slide2, slide3, slide4 } from "../../assets/images";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import { Pagination, Navigation } from "swiper/modules";
+import "swiper/css/effect-fade";
+import { Pagination, Navigation, EffectFade, Autoplay } from "swiper/modules";
 import "./about-us.scss";
 import { useRef } from "react";
 import Icon from "@mdi/react";
@@ -12,14 +13,29 @@ const AboutUsSlider = () => {
   const slides = [slide1, slide2, slide3, slide4];
   const prevRef = useRef(null);
   const nextRef = useRef(null);
+
+  const progressCircle = useRef(null);
+  const progressContent = useRef(null);
+  const onAutoplayTimeLeft = (s, time, progress) => {
+    progressCircle.current.style.setProperty("--progress", 1 - progress);
+    progressContent.current.textContent = `${Math.ceil(time / 1000)}s`;
+  };
+
   return (
     <>
       <Swiper
+        effect={"fade"}
+        loop={true}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
+        onAutoplayTimeLeft={onAutoplayTimeLeft}
         pagination={{
           el: "#slider-pagination",
           clickable: true,
         }}
-        modules={[Pagination, Navigation]}
+        modules={[Pagination, Navigation, EffectFade, Autoplay]}
         onBeforeInit={(swiper) => {
           swiper.params.navigation.prevEl = prevRef.current;
           swiper.params.navigation.nextEl = nextRef.current;
@@ -37,6 +53,12 @@ const AboutUsSlider = () => {
             </SwiperSlide>
           );
         })}
+        <div className="autoplay-progress" slot="container-end">
+          <svg viewBox="0 0 48 48" ref={progressCircle}>
+            <circle cx="24" cy="24" r="20"></circle>
+          </svg>
+          <span ref={progressContent}></span>
+        </div>
       </Swiper>
       <div className="flex items-center justify-between mt-3">
         <div
