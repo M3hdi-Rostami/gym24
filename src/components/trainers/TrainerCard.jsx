@@ -1,15 +1,6 @@
 import { mdiInstagram, mdiTwitter, mdiYoutube } from "@mdi/js";
 import Icon from "@mdi/react";
-
-const SocialLink = ({ children, link }) => {
-  return (
-    <span className="w-10 h-10 rounded-full border border-white text-white flex items-center justify-center hover:text-yellow hover:border-yellow transition duration-300 cursor-pointer">
-      <a href={link} target="_blank" rel="noreferrer">
-        {children}
-      </a>
-    </span>
-  );
-};
+import SocialLink from "../social-link/SocialLink";
 
 const TrainerCard = ({ image, name, instagram, twitter, youtube }) => {
   return (
