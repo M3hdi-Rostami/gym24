@@ -30,9 +30,12 @@ const Header = () => {
           <img src={logo} alt="gym24 logo" />
         </div>
         <ul className="flex gap-[75px]">
-          {navLinks.map(({ routePath, title }) => {
+          {navLinks.map(({ routePath, title }, index) => {
             return (
-              <li className="hover:text-yellow transition">
+              <li
+                key={`link-${index}`}
+                className="hover:text-yellow transition"
+              >
                 <Link to={routePath}>{title}</Link>
               </li>
             );

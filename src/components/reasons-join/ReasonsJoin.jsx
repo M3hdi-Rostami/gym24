@@ -48,13 +48,11 @@ const ReasonsJoin = () => {
   ];
 
   return (
-    <div className="px-[220px] py-8 mt-44 mb-60">
-      <div className="text-5xl font-family-bold mb-28">
-        Reasons to join
-      </div>
+    <div className="py-8 mt-44 mb-60">
+      <div className="text-5xl font-family-bold mb-28">Reasons to join</div>
       <div className="flex flex-wrap gap-x-28 gap-y-20 ">
-        {reasons.map(({ image, title, description }) => (
-          <div className="basis-[473px] flex-grow">
+        {reasons.map(({ image, title, description }, index) => (
+          <div key={`reason-${index}`} className="basis-[473px] flex-grow">
             <ReasonBox image={image} title={title} description={description} />
           </div>
         ))}

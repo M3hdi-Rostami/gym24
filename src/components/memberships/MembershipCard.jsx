@@ -13,9 +13,12 @@ const MembershipCard = ({ title, price, items }) => {
       </div>
       <div className="px-4 pt-6 flex items-center justify-between flex-col h-[305px] rounded-b-[10px] relative">
         <ul className="m-0 p-0 flex items-center justify-start flex-col gap-4">
-          {items.map(({ caption }) => {
+          {items.map(({ caption }, index) => {
             return (
-              <li className="flex items-center justify-start w-full gap-3">
+              <li
+                key={`li-${index}`}
+                className="flex items-center justify-start w-full gap-3"
+              >
                 <span className="group-hover:text-yellow">
                   <Icon path={mdiCheckCircleOutline} size="20" />
                 </span>
@@ -24,7 +27,10 @@ const MembershipCard = ({ title, price, items }) => {
             );
           })}
         </ul>
-        <Button title="Buy" extraClass="text-14 font-family-light py-[6px] absolute bottom-7" />
+        <Button
+          title="Buy"
+          extraClass="text-14 font-family-light py-[6px] absolute bottom-7"
+        />
       </div>
     </div>
   );

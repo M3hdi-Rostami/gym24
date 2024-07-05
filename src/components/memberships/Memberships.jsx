@@ -97,12 +97,19 @@ const MemberShips = () => {
     },
   ];
   return (
-    <section className="flex items-center justify-center flex-col w-full mb-10 px-[320px]">
+    <section className="flex items-center justify-center flex-col w-full mb-10 px-[100px]">
       <div className="text-[48px] text-white mb-28">Gym membership</div>
       <div className="flex items-center justify-center gap-16 flex-wrap">
-      {memberships.map(({ title, price, items }) => {
-        return <MembershipCard title={title} price={price} items={items} />;
-      })}
+        {memberships.map(({ title, price, items }, index) => {
+          return (
+            <MembershipCard
+              key={`membership-${index}`}
+              title={title}
+              price={price}
+              items={items}
+            />
+          );
+        })}
       </div>
     </section>
   );
