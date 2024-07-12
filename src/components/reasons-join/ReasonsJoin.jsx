@@ -8,11 +8,11 @@ import {
 const ReasonsJoin = () => {
   const ReasonBox = ({ image, title, description }) => {
     return (
-      <div className="flex items-center justify-start gap-5">
+      <div className="flex items-center justify-center md:justify-start gap-5">
         <img src={image} alt="reason box" className="w-20 h-20 pt-4" />
         <div className="flex flex-col gap-2">
-          <span className="ont-family-extra-bold text-18">{title}</span>
-          <span className="font-light text-14 max-w-[400px]">
+          <span className="ont-family-extra-bold text-18 text-left">{title}</span>
+          <span className="font-light text-14 max-w-[400px] text-left">
             {description}
           </span>
         </div>
@@ -48,7 +48,7 @@ const ReasonsJoin = () => {
   ];
 
   return (
-    <div className="py-8 mt-44 mb-60">
+    <div className="py-8 mt-44 mb-60 text-center md:text-left px-10 md:px-0">
       <div className="text-5xl font-family-bold mb-28">Reasons to join</div>
       <div className="flex flex-wrap gap-x-28 gap-y-20 ">
         {reasons.map(({ image, title, description }, index) => (

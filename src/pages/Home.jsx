@@ -9,7 +9,7 @@ const Home = () => {
   return (
     <>
       <Header />
-      <div className="px-[372.5px]">
+      <div className="xl:px-[372.5px] md:px-10 select-none md:select-auto">
         <ReasonsJoin />
         <MemberShips />
         <AboutUs />

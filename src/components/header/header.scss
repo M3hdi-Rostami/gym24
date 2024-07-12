@@ -1,4 +1,57 @@
 header {
   background-image: url("../../assets/images/header-background.png");
-  @apply w-dvw min-h-dvh bg-contain bg-right bg-no-repeat px-[372.5px] py-8;
+  @apply bg-blend-screen;
+
+  .menu {
+    @apply text-white p-2 relative no-underline;
+
+    &::before {
+      content: "";
+      @apply bg-yellow w-full h-0.5 absolute left-0 bottom-0 rounded transition-all duration-500 ease-in-out transform scale-x-0;
+    }
+    &:hover {
+      &::before {
+        @apply transform scale-x-100;
+      }
+    }
+  }
+}
+.btn-menu {
+  @apply flex md:hidden items-center justify-center min-h-4 px-0 border-none bg-transparent text-inherit cursor-pointer transition-all duration-300 ease-in-out;
+
+  &:focus {
+    outline: none;
+  }
+
+  &__bars {
+    @apply block relative w-9 h-0.5 bg-white transition-all duration-300;
+
+    &:before,
+    &:after {
+      content: "";
+      @apply block absolute left-0 w-full h-full bg-white transition-all duration-300;
+    }
+
+    &:before {
+      transform: translate(0, -10px);
+    }
+
+    &:after {
+      transform: translate(0, 10px);
+    }
+  }
+
+  &.menu-open {
+    .btn-menu__bars {
+      @apply bg-transparent;
+
+      &:before {
+        transform: rotate(45deg);
+      }
+
+      &:after {
+        transform: rotate(-45deg);
+      }
+    }
+  }
 }

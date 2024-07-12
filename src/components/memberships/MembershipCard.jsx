@@ -4,8 +4,8 @@ import { mdiCheckCircleOutline } from "@mdi/js";
 
 const MembershipCard = ({ title, price, items }) => {
   return (
-    <div className="group w-[275px] h-[400px] bg-dark-gray rounded-[10px]  text-white border border-dark-gray hover:border-yellow transition duration-300 cursor-pointer">
-      <div className="px-6 py-4 border-b border-black rounded-t-[10px] group-hover:bg-yellow group-hover:text-black transition duration-300">
+    <div className="group w-[275px] h-[400px] bg-dark-gray rounded-[10px]  text-white border border-dark-gray hover:border-yellow transition duration-500 cursor-pointer">
+      <div className="px-6 py-4 border-b border-black rounded-t-[10px] group-hover:bg-yellow group-hover:text-black transition duration-500">
         <div className="text-18 font-family-bold text-center">
           Pass ‘{title}’
         </div>

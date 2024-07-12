@@ -1,3 +1,8 @@
+import "swiper/css";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+
+import { Autoplay } from "swiper/modules";
 import MembershipCard from "./MembershipCard";
 
 const MemberShips = () => {
@@ -97,9 +102,11 @@ const MemberShips = () => {
     },
   ];
   return (
-    <section className="flex items-center justify-center flex-col w-full mb-10 px-[100px]">
-      <div className="text-[48px] text-white mb-28">Gym membership</div>
-      <div className="flex items-center justify-center gap-16 flex-wrap">
+    <section className="flex items-center justify-center flex-col w-full mb-10 md:px-[100px]">
+      <div className="text-[3rem] text-white mb-28 text-center md:text-left px-10 md:px-0">
+        Gym membership
+      </div>
+      <div className="hidden md:flex items-center justify-center gap-16 flex-wrap">
         {memberships.map(({ title, price, items }, index) => {
           return (
             <MembershipCard
@@ -110,6 +117,59 @@ const MemberShips = () => {
             />
           );
         })}
+      </div>
+      <div className="w-full block md:hidden">
+        <Swiper
+          slidesPerView={2.5}
+          centeredSlides={true}
+          spaceBetween={36}
+          loop={true}
+          autoplay={{
+            delay: 2500,
+            disableOnInteraction: false,
+          }}
+          breakpoints={{
+            320: {
+              slidesPerView: 1.3,
+              spaceBetween: 10,
+            },
+            425: {
+              slidesPerView: 1.5,
+              spaceBetween: 10,
+            },
+            480: {
+              slidesPerView: 1.7,
+              spaceBetween: 20,
+            },
+            580: {
+              slidesPerView: 2.2,
+              spaceBetween: 20,
+            },
+            640: {
+              slidesPerView: 2.3,
+              spaceBetween: 20,
+            },
+            768: {
+              slidesPerView: 2.7,
+              spaceBetween: 30,
+            },
+          }}
+          modules={[Autoplay]}
+          className="md:rounded-[10px] w-full"
+        >
+          {memberships.map(({ title, price, items }, index) => {
+            return (
+              <SwiperSlide key={`membership-slide-${index}`}>
+                <MembershipCard
+                  key={`membership-${index}`}
+                  title={title}
+                  price={price}
+                  items={items}
+                />
+              </SwiperSlide>
+            );
+          })}
+        </Swiper>
       </div>
     </section>
   );
