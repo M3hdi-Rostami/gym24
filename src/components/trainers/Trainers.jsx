@@ -74,7 +74,9 @@ const Trainers = () => {
   ];
   return (
     <section className="flex items-center justify-center flex-col w-full mb-[259px]">
-      <div className="text-[48px] text-white mb-28 text-center">Trainers staff</div>
+      <div className="sm:text-[48px] text-[28px] text-white mb-28 text-center">
+        Trainers staff
+      </div>
       <div className="hidden md:flex items-center justify-center gap-5 flex-wrap">
         {trainers.map(({ name, image, instagram, twitter, youtube }, index) => {
           return (
@@ -100,9 +102,13 @@ const Trainers = () => {
             disableOnInteraction: false,
           }}
           breakpoints={{
-            320: {
+            375: {
               slidesPerView: 1.3,
               spaceBetween: 10,
+            },
+            412: {
+              slidesPerView: 1.5,
+              spaceBetween: 20,
             },
             480: {
               slidesPerView: 1.5,

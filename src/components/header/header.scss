@@ -55,3 +55,9 @@ header {
     }
   }
 }
+
+@media only screen and (max-width: 580px) {
+  header {
+    background-image: url("../../assets/images/mobile-header-background.png");
+  }
+}

@@ -103,7 +103,7 @@ const MemberShips = () => {
   ];
   return (
     <section className="flex items-center justify-center flex-col w-full mb-10 md:px-[100px]">
-      <div className="text-[3rem] text-white mb-28 text-center md:text-left px-10 md:px-0">
+      <div className="sm:text-[3rem] text-[1.8rem] text-white mb-28 text-center md:text-left px-10 md:px-0">
         Gym membership
       </div>
       <div className="hidden md:flex items-center justify-center gap-16 flex-wrap">
@@ -129,13 +129,13 @@ const MemberShips = () => {
             disableOnInteraction: false,
           }}
           breakpoints={{
-            320: {
+            375: {
               slidesPerView: 1.3,
               spaceBetween: 10,
             },
-            425: {
+            412: {
               slidesPerView: 1.5,
-              spaceBetween: 10,
+              spaceBetween: 20,
             },
             480: {
               slidesPerView: 1.7,

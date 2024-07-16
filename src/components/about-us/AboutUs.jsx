@@ -5,7 +5,7 @@ const AboutUs = () => {
   return (
     <div className="flex items-start justify-between flex-col md:flex-row gap-[118px] mt-[264px] mb-[241px]">
       <div className="max-w-[472px] md:max-w-full m-auto md:m-0 px-10 md:px-0">
-        <div className="text-[3rem] text-white mb-16 text-center md:text-left">
+        <div className="sm:text-[3rem] text-[1.8rem] text-white mb-16 text-center md:text-left">
           About us
         </div>
         <div className="flex flex-col gap-10 text-14 font-light text-center md:text-left">

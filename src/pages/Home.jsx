@@ -10,10 +10,18 @@ const Home = () => {
     <>
       <Header />
       <div className="xl:px-[372.5px] md:px-10 select-none md:select-auto">
-        <ReasonsJoin />
-        <MemberShips />
-        <AboutUs />
-        <Trainers />
+        <div id="reason-join">
+          <ReasonsJoin />
+        </div>
+        <div id="member-ships">
+          <MemberShips />
+        </div>
+        <div id="about-us">
+          <AboutUs />
+        </div>
+        <div id="trainers">
+          <Trainers />
+        </div>
         <Footer />
       </div>
     </>

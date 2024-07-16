@@ -87,7 +87,7 @@ const Footer = () => {
       </div>
       <button
         onClick={togglePlay}
-        className="bg-yellow text-black w-12 h-12 rounded-full flex items-center justify-center fixed left-10 bottom-10 z-10"
+        className="bg-yellow text-black w-12 h-12 rounded-full flex items-center justify-center fixed left-5 bottom-5 sm:left-10 sm:bottom-10 z-10"
       >
         {isPlaying ? (
           <Icon path={mdiPause} size="24" />
