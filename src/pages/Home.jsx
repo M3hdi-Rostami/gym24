@@ -10,16 +10,16 @@ const Home = () => {
     <>
       <Header />
       <div className="xl:px-[372.5px] md:px-10 select-none md:select-auto">
-        <div id="reason-join">
+        <div className="scroll-mt-24" id="reason-join">
           <ReasonsJoin />
         </div>
-        <div id="member-ships">
+        <div className="scroll-mt-24" id="member-ships">
           <MemberShips />
         </div>
-        <div id="about-us">
+        <div className="scroll-mt-24" id="about-us">
           <AboutUs />
         </div>
-        <div id="trainers">
+        <div className="scroll-mt-24" id="trainers">
           <Trainers />
         </div>
         <Footer />
